@@ -33,20 +33,8 @@ Think of it as your **centralized AI assistant** for multi-platform chatting, te
 
 ## Project Structure
 
-free-ai-agent/
-├── app.py # Main entry point (optional)
-├── web_ui.py # Runs both Discord & Telegram bots + Web UI
-├── discord_bot.py # Discord bot logic
-├── telegram_bot.py # Telegram bot logic
-├── templates/
-│ └── index.html # Web dashboard
-├── static/
-│ └── style.css # Web UI styles
-├── data/
-│ └── chat_history.db # Optional chat storage
-├── utils.py # Helper functions
-├── requirements.txt # Python dependencies
-└── .env # Store your tokens (DO NOT PUSH!) 
+<img width="503" height="225" alt="image" src="https://github.com/user-attachments/assets/daf92c4d-96e0-448c-98f1-3234a1d9c7d7" />
+
 
 
 ---
@@ -79,10 +67,6 @@ python web_ui.py
 Visit: http://127.0.0.1:5000
 
 Send messages to Telegram or Discord directly from the dashboard.
-<img width="935" height="491" alt="image" src="https://github.com/user-attachments/assets/7a16108b-47ed-487e-980b-0fbf7cec742b" />
-<img width="655" height="410" alt="image" src="https://github.com/user-attachments/assets/68af3dc9-4b31-4e05-a7b6-99540327683e" />
-<img width="930" height="483" alt="image" src="https://github.com/user-attachments/assets/fa3e2217-8926-4707-b6aa-bee5b51595d1" />
-<img width="675" height="381" alt="image" src="https://github.com/user-attachments/assets/dd71466e-8425-4832-98b4-04ec246a0ab4" />
 
 Security & Notes
 
