@@ -1,4 +1,4 @@
-# 🧠 Free AI Agent
+#  Free AI Agent
 
 ![AI Agent Banner](https://raw.githubusercontent.com/sainathmitalakar/free-ai-agent/main/static/ai-banner.png)
 
