@@ -1,0 +1,6 @@
+Flask
+python-dotenv
+gpt4all
+python-telegram-bot==13.15
+discord.py
+sqlalchemy

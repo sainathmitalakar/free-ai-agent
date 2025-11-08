@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Agent Control Panel</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🖥️ AI Agent Dashboard</h1>
+            <p>Status: <span class="status">Running</span></p>
+        </header>
+
+        <section class="send-section">
+            <textarea id="msg" placeholder="Type your message..."></textarea>
+            <select id="platform">
+                <option value="telegram">Telegram</option>
+                <option value="discord">Discord</option>
+            </select>
+            <button onclick="sendMsg()">Send</button>
+        </section>
+
+        <section class="messages-section">
+            <h2>Recent Chats</h2>
+            <div id="messages">
+                {% for p, user, ai, ts in messages %}
+                <div class="msg">
+                    <b>[{{p}}]</b> You: {{user}} <br>
+                    <i>AI:</i> {{ai}} <small>({{ts}})</small>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </div>
+
+<script>
+async function sendMsg(){
+    const text = document.getElementById("msg").value;
+    const platform = document.getElementById("platform").value;
+    const res = await fetch("/send", {
+        method:"POST",
+        headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({message:text, platform})
+    });
+    const data = await res.json();
+    alert("Sent: " + data.message);
+    document.getElementById("msg").value = "";
+}
+</script>
+</body>
+</html>
